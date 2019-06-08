@@ -14,4 +14,12 @@ public class ClubService {
     public void updateClub(Club club) {
         clubDao.update(club);
     }
+
+    public void deleteClub(Club club) {
+        clubDao.delete(club);
+    }
+
+    public void deleteAll() {
+        clubDao.deleteAll();
+    }
 }

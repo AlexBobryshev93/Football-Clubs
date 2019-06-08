@@ -11,10 +11,12 @@ public class Main {
         Club club = new Club("Rapid Fire");
         clubService.saveClub(club);
         Player player = new Player("Prokopenko", 28);
-        club.addPlayer(player);
-        System.out.println(player);
-        //clubService.updateClub(club);
+        club.addPlayer(player); //should be also saved using PlayerService?
+        //System.out.println(player);
+        clubService.updateClub(club);
         //System.out.println(club);
+        clubService.deleteClub(club);
+        //clubService.deleteAll();
 
     }
 }
