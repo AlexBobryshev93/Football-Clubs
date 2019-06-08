@@ -24,4 +24,12 @@ public class ClubDaoImpl implements ClubDao {
         tx.commit();
         session.close();
     }
+
+    public void delete(Club club) {
+        Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
+        Transaction tx = session.beginTransaction();
+        session.delete(club);
+        tx.commit();
+        session.close();
+    }
 }

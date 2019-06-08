@@ -12,7 +12,8 @@ public class Main {
         clubService.saveClub(club);
         Player player = new Player("Prokopenko", 28);
         club.addPlayer(player);
-        clubService.updateClub(club);
+        System.out.println(player);
+        //clubService.updateClub(club);
         //System.out.println(club);
 
     }
