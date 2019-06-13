@@ -59,7 +59,7 @@ public class PlayerDaoImpl implements PlayerDao {
         Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
         List<Player> list = (List<Player>) session.createQuery("From Player").list();
         Transaction tx = session.beginTransaction();
-        session.delete(list);
+        for (Player player : list) session.delete(player);
         tx.commit();
         session.close();
     }

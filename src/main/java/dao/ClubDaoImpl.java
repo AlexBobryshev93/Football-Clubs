@@ -59,7 +59,7 @@ public class ClubDaoImpl implements ClubDao {
         Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
         List<Club> list = (List<Club>) session.createQuery("From Club").list();
         Transaction tx = session.beginTransaction();
-        session.delete(list);
+        for (Club club : list) session.delete(club);
         tx.commit();
         session.close();
     }
