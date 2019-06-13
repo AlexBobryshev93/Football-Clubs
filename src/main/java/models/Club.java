@@ -38,7 +38,6 @@ public class Club {
         return "Club{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", players=" + players +
                 '}';
     }
 }

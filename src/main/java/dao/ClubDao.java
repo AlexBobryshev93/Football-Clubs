@@ -2,9 +2,14 @@ package dao;
 
 import models.Club;
 
+import java.util.List;
+
 public interface ClubDao {
-    void save(Club club);
+    void add(Club club);
+    Club getById(Integer id);
+    List<Club> getAll();
     void update(Club club);
-    void delete(Club club);
-    void deleteAll();
+    void updateAll();
+    void remove(Club club);
+    void removeAll();
 }

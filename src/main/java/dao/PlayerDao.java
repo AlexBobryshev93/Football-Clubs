@@ -2,9 +2,14 @@ package dao;
 
 import models.Player;
 
+import java.util.List;
+
 public interface PlayerDao {
-    void save(Player player);
+    void add(Player player);
+    Player getById(Integer id);
+    List<Player> getAll();
     void update(Player player);
-    void delete(Player player);
-    void deleteAll();
+    void updateAll();
+    void remove(Player player);
+    void removeAll();
 }

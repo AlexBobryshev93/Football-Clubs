@@ -7,19 +7,31 @@ import models.Club;
 public class ClubService {
     private ClubDao clubDao = new ClubDaoImpl();
 
-    public void saveClub(Club club) {
-        clubDao.save(club);
+    public void addClub(Club club) {
+        clubDao.add(club);
+    }
+
+    public void getClubById(Integer id) {
+        clubDao.getById(id);
+    }
+
+    public void getAll() {
+        clubDao.getAll();
     }
 
     public void updateClub(Club club) {
         clubDao.update(club);
     }
 
-    public void deleteClub(Club club) {
-        clubDao.delete(club);
+    public void updateAll() {
+        clubDao.updateAll();
     }
 
-    public void deleteAll() {
-        clubDao.deleteAll();
+    public void removeClub(Club club) {
+        clubDao.remove(club);
+    }
+
+    public void removeAll() {
+        clubDao.removeAll();
     }
 }

@@ -11,15 +11,15 @@ public class Main {
         PlayerService playerService = new PlayerService();
 
         Club club = new Club("Rapid Fire");
-        clubService.saveClub(club);
+        clubService.addClub(club);
         Player player = new Player("Prokopenko", 28);
         club.addPlayer(player);
-        playerService.savePlayer(player); //should be also saved using PlayerService?
-        //System.out.println(player);
         clubService.updateClub(club);
-        //System.out.println(club);
-        //clubService.deleteClub(club);
-        //clubService.deleteAll();
-
+        System.out.println(player);
+        System.out.println(club);
+        //playerService.removePlayer(player);
+        //playerService.removeAll();
+        //clubService.removeClub(club);
+        //clubService.removeAll();
     }
 }
