@@ -20,6 +20,6 @@ public class Main {
         //playerService.removePlayer(player);
         //playerService.removeAll();
         //clubService.removeClub(club);
-        //clubService.removeAll();
+        clubService.removeAll();
     }
 }

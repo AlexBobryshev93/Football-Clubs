@@ -12,7 +12,7 @@ public class Club {
     private int id;
     private String name;
 
-    @OneToMany(mappedBy = "club", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "club", cascade = CascadeType.ALL) // will try to do wo orphan removal
     private List<Player> players;
 
     public Club(String name) {
